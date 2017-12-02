@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TRIP GURU-World's Best Tourist Site</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <script src="html5shiv.js"></script>
+    <script src="respond.js"></script>
+    <![endif]-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 70px;
+            font-family: Helvetica, sans-serif;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+
+        .slide-image {
+            width: 100%;
+        }
+
+        .carousel-holder {
+            margin-bottom: 30px;
+        }
+
+        .carousel-control,
+        .item {
+            border-radius: 4px;
+        }
+
+        .caption {
+            height: 130px;
+            overflow: hidden;
+        }
+
+        .caption h4 {
+            white-space: nowrap;
+        }
+
+        .thumbnail img {
+            width: 100%;
+        }
+
+        .ratings {
+            padding-right: 10px;
+            padding-left: 10px;
+            color: #d17325;
+        }
+
+        .thumbnail {
+            padding: 0;
+        }
+
+        .thumbnail .caption-full {
+            padding: 9px;
+            color: #333;
+        }
+
+        footer {
+            margin: 50px 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 33%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        @media all and (max-width: 600px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+            .bg{
+
+                background-color: blue;
+            }
+
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container::before {
+                left: 60px;
+                border:blue;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+
+
+        }
+
+        .button{
+            
+
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">TRIP MASTER</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">State-Wise</a>
+                </li>
+                <li>
+                    <a href="#">Important Places</a>
+                </li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="htimeline.php"><span class="glyphicon glyphicon-user"></span>Myactivity</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <p class="lead"></p>
+            <div class="list-group">
+                <a href="index.html" class="list-group-item active">Home</a>
+                <a href="calender.html" class="list-group-item">Voyage</a>
+                <a href="#" class="list-group-item">Custom</a>
+                <a href="#" class="list-group-item">Settings</a>
+                <a href="#" class="list-group-item">Help</a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+
+
+
+            <div class="timeline">
+                <link href="timeline.css" rel="stylesheet">
+                <div class="container1 left">
+                    <div class="content">
+                      <button style=""
+                        <h2>Jaipur</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="container1 right">
+                    <div class="content">
+                        <h2>Agra</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="container1 left">
+                    <div class="content">
+                        <h2>Delhi</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footerHeader" ></div>
+
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-bottom" role="navigation">
+                <div class="col-md-4" >
+                    <h3>About us</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Our Location </h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433868.0837064906!2d35.66744174160663!3d31.836036762053016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1499168051085" sytle="" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-4" >
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Phone : 123 - 456 - 789</li>
+                        <li>E-mail : info@comapyn.com</li>
+                        <li>Fax : 123 - 456 - 789</li>
+                    </ul>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    </p>
+                    <ul class="sm">
+                        <li><a href="#" ><img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive"></a></li>
+                        <li><a href="#" ><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" class="img-responsive" ></a></li>
+                        <li><a href="#" ><img src="http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive"  ></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
